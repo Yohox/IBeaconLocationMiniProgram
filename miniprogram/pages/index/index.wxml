@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+<!-- <view>
+  <input value="{{config.rssi}}" placeholder="一米时的rssi" bindinput="handleInputRssi"/>
+  <input value="{{config.n}}" placeholder="环境衰减因子" bindinput="handleInputN"/>
+  <h1>计算出来的坐标: {{x}} {{y}}</h1>
+  <view wx:for="{{accuracys}}">
+    {{item.id}}:{{item.accuracy}}
+  </view>
+  <view wx:for="{{rssis}}">
+    {{index}}:<span wx:for="{{item}}">{{item}},
+    </span>
+  </view>
+</view> -->
+
+
+<canvas canvas-id="container" id="canvas-container" class="canvas-container">
+
+</canvas>
+<view class="button-list">
+   <button wx:if="{{!isNavigation}}" size="mini" type="primary" bindtap="handleBuildingClick">导航</button>
+    <button wx:else size="mini" type="primary" bindtap="handleCancelNavigation">取消</button>
+    <button size="mini" type="primary" bindtap="handleLocation">定位</button>
+    <button size="mini" type="primary" bindtap="handleReset">复位</button>
+</view>
+</view>
